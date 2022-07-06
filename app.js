@@ -45,5 +45,14 @@ new Vue({
       .catch(err => self.detail = {})
       .finally(() =>  self.isLoadingDetail = false)
     },
+
+    print() {
+      $("#aw").table2excel({
+        exclude: ".excludeThisClass",
+        name: "Worksheet Name",
+        filename: "SomeFile.xls", // do include extension
+        preserveColors: false // set to true if you want background colors and font colors preserved
+      });
+    }
   }
 });

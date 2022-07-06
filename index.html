@@ -16,7 +16,7 @@
             <img src="logo.jpeg" alt="">
           </section>
           <section class="card p-4">
-            <h5 class="text-center">Dashboard Pemantauan</h5>
+            <p class="mb-0">Copyright &#169; 2022 Pak Mirza PI</p>
             <!-- <button type="button" class="btn btn-outline-primary mb-2">Primary</button>
             <button type="button" class="btn btn-outline-primary">Primary</button> -->
           </section>
@@ -84,7 +84,7 @@
                 <p><b>Waktu Selesai: &nbsp;</b><span>{{ detail.end_at }}</span></p>
                 <p><b>Tester: &nbsp;</b><span>{{ detail.tester }}</span></p>
               </div>
-              <table class="table">
+              <table class="table" id="aw" data-toggle="table">
                 <thead>
                   <tr>
                     <th>No</th>
@@ -108,7 +108,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" v-on:click="ewh('sdf')" class="btn btn-success"><i class="fa fa-print"></i>&nbsp;Cetak Excel</button>
+            <button type="button" v-on:click="print()" class="btn btn-success"><i class="fa fa-print"></i>&nbsp;Cetak Excel</button>
           </div>
         </div>
       </div>
@@ -128,6 +128,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-moment@4.0.0-0/vue-moment.min.js">
   </script>
+  <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
   <script src="app.js"></script>
   </body>
 </html>
