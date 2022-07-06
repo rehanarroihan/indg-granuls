@@ -6,7 +6,10 @@ new Vue({
   el: '#app',
   data() {
     return {
-      totalEvent: 0,
+      list: [],
+      isLoadingList: false,
+      detail: {},
+      isLoadingDetail: false,
     }
   },
   validations: {
@@ -17,9 +20,30 @@ new Vue({
   },
   methods: {
     getList() {
-      console.log("list")
-    },
+      const self = this
 
-    
+      self.isLoadingList = true
+      
+      axios.get(`https://granuls.rahardianwardana.my.id/api/listUjiCoba`)
+      .then((result) => {
+        self.list = result.data
+      })
+      .catch(err => console.log(err))
+      .finally(() =>  self.isLoadingList = false)
+    },    
+
+    getDetail(item) {
+      const self = this
+
+      self.isLoadingDetail = true
+
+      axios.get(`https://granuls.rahardianwardana.my.id/api/logs/pengecekan?id=${item.ID}`)
+      .then((result) => {
+        self.detail = item
+        self.detail.results = result.data
+      })
+      .catch(err => self.detail = {})
+      .finally(() =>  self.isLoadingDetail = false)
+    },
   }
 });

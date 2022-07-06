@@ -2,151 +2,132 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Granul Dashboard</title>
+    <title>Granuls Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-  <main id="app" class="container">
-    <section class="card p-4 mb-4 mt-4">
-      <h5>Dashboard</h5>
-      <div class="row mb-3">
-        <!-- Widget Type 1-->
-        <div class="mb-4 col-sm-6 col-lg-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <h4 class="fw-normal text-red">$10,500</h4>
-                  <p class="subtitle text-sm text-muted mb-0">Earnings</p>
-                </div>
-                <div class="flex-shrink-0 ms-3">
-                  <svg class="svg-icon text-red">
-                    <use xlink:href="icons/orion-svg-sprite.71e9f5f2.svg#speed-1"> </use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer py-3 bg-red-light">
-              <div class="row align-items-center text-red">
-                <div class="col-10">
-                  <p class="mb-0">20% increase</p>
-                </div>
-                <div class="col-2 text-end"><i class="fas fa-caret-up"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Widget Type 1-->
-        <!-- Widget Type 1-->
-        <div class="mb-4 col-sm-6 col-lg-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <h4 class="fw-normal text-blue">584</h4>
-                  <p class="subtitle text-sm text-muted mb-0">Readers</p>
-                </div>
-                <div class="flex-shrink-0 ms-3">
-                      <svg class="svg-icon text-blue">
-                        <use xlink:href="icons/orion-svg-sprite.71e9f5f2.svg#news-1"> </use>
-                      </svg>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer py-3 bg-blue-light">
-              <div class="row align-items-center text-blue">
-                <div class="col-10">
-                  <p class="mb-0">3% increase</p>
-                </div>
-                <div class="col-2 text-end"><i class="fas fa-caret-up"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Widget Type 1-->
-        <!-- Widget Type 1-->
-        <div class="mb-4 col-sm-6 col-lg-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <h4 class="fw-normal text-primary">876</h4>
-                  <p class="subtitle text-sm text-muted mb-0">Bookmarks</p>
-                </div>
-                <div class="flex-shrink-0 ms-3">
-                      <svg class="svg-icon text-primary">
-                        <use xlink:href="icons/orion-svg-sprite.71e9f5f2.svg#bookmark-1"> </use>
-                      </svg>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer py-3 bg-primary-light">
-              <div class="row align-items-center text-primary">
-                <div class="col-10">
-                  <p class="mb-0">10% increase</p>
-                </div>
-                <div class="col-2 text-end"><i class="fas fa-caret-up"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Widget Type 1-->
-        <!-- Widget Type 1-->
-        <div class="mb-4 col-sm-6 col-lg-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <h4 class="fw-normal text-green">3,500</h4>
-                  <p class="subtitle text-sm text-muted mb-0">Visitors</p>
-                </div>
-                <div class="flex-shrink-0 ms-3">
-                      <svg class="svg-icon text-green">
-                        <use xlink:href="icons/orion-svg-sprite.71e9f5f2.svg#world-map-1"> </use>
-                      </svg>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer py-3 bg-green-light">
-              <div class="row align-items-center text-green">
-                <div class="col-10">
-                  <p class="mb-0">5% decrease</p>
-                </div>
-                <div class="col-2 text-end"><i class="fas fa-caret-down"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Widget Type 1-->
-      </div>
-    </section>
+  <main id="app" class="container mb-4 mt-4">
     <div class="row">
       <div class="col-3">
-        <section class="card p-4">
-          <h5>Menu</h5>
-          <div class="divider"></div>
-          <button type="button" class="btn btn-outline-primary mb-2">Primary</button>
-          <button type="button" class="btn btn-outline-primary">Primary</button>
-        </section>
+        <div>
+          <section class="card p-4 mb-4">
+            <img src="logo.jpeg" alt="">
+          </section>
+          <section class="card p-4">
+            <h5 class="text-center">Dashboard Pemantauan</h5>
+            <!-- <button type="button" class="btn btn-outline-primary mb-2">Primary</button>
+            <button type="button" class="btn btn-outline-primary">Primary</button> -->
+          </section>
+        </div>
       </div>
       <div class="col-9">
         <section class="card p-4">
-          <h5>Dashboard</h5>
+          <h5 class="mb-4">Data Pengujian</h5>
           <div class="divider"></div>
+          <div v-if="isLoadingList" class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <table v-if="!isLoadingList" class="table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Title</th>
+                <th>Waktu Mulai</th>
+                <th>Waktu Selesai</th>
+                <th>Tester</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data-row" v-for="(item, index) in list">
+                <td>{{ index+1 }}</td>
+                <td>{{ item.title }}</td>
+                <td class="eventType">{{ item.start_at }}</td>
+                <td>{{ item.end_at }}</td>
+                <td>{{ item.tester }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    v-on:click="getDetail(item)"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Detail Pengujian</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <div v-if="isLoadingDetail" class="spinner-border text-secondary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <div v-if="!isLoadingDetail">
+              <div>
+                <p><b>Judul Pengujian: &nbsp;</b><span>{{ detail.title }}</span></p>
+                <p><b>Waktu Mulai: &nbsp;</b><span>{{ detail.start_at }}</span></p>
+                <p><b>Waktu Selesai: &nbsp;</b><span>{{ detail.end_at }}</span></p>
+                <p><b>Tester: &nbsp;</b><span>{{ detail.tester }}</span></p>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Fertility</th>
+                    <th>Kalium</th>
+                    <th>Nitrogen</th>
+                    <th>Phosphat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="data-row" v-for="(item, index) in detail.results">
+                    <td>{{ index+1 }}</td>
+                    <td>{{ item.fertility }}</td>
+                    <td>{{ item.kalium }}</td>
+                    <td>{{ item.nitrogen }}</td>
+                    <td>{{ item.phosphat }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" v-on:click="ewh('sdf')" class="btn btn-success"><i class="fa fa-print"></i>&nbsp;Cetak Excel</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="https://unpkg.com/vuelidate/dist/validators.min.js"></script>
   <script src="https://unpkg.com/vuelidate/dist/vuelidate.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-moment@4.0.0-0/vue-moment.min.js">
+  </script>
   <script src="app.js"></script>
   </body>
 </html>
