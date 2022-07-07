@@ -10,8 +10,8 @@
   <body>
   <main id="app" class="container mb-4 mt-4">
     <div class="row">
-      <div class="col-3">
-        <div>
+      <div class="col-xl-3 col-sm-12 mb-4">
+        <div class="sticky-xl-top">
           <section class="card p-4 mb-4">
             <img src="logo.jpeg" alt="">
           </section>
@@ -22,45 +22,47 @@
           </section>
         </div>
       </div>
-      <div class="col-9">
+      <div class="col-xl-9 col-sm-12">
         <section class="card p-4">
           <h5 class="mb-4">Data Pengujian</h5>
           <div class="divider"></div>
           <div v-if="isLoadingList" class="spinner-border text-secondary" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
-          <table v-if="!isLoadingList" class="table">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Title</th>
-                <th>Waktu Mulai</th>
-                <th>Waktu Selesai</th>
-                <th>Tester</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="data-row" v-for="(item, index) in list">
-                <td>{{ index+1 }}</td>
-                <td>{{ item.title }}</td>
-                <td class="eventType">{{ item.start_at }}</td>
-                <td>{{ item.end_at }}</td>
-                <td>{{ item.tester }}</td>
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-sm"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    v-on:click="getDetail(item)"
-                  >
-                    Detail
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div v-if="!isLoadingList" class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Title</th>
+                  <th>Waktu Mulai</th>
+                  <th>Waktu Selesai</th>
+                  <th>Tester</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data-row" v-for="(item, index) in list">
+                  <td>{{ index+1 }}</td>
+                  <td>{{ item.title }}</td>
+                  <td class="eventType">{{ item.start_at }}</td>
+                  <td>{{ item.end_at }}</td>
+                  <td>{{ item.tester }}</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                      v-on:click="getDetail(item)"
+                    >
+                      Detail
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
     </div>
@@ -84,26 +86,28 @@
                 <p><b>Waktu Selesai: &nbsp;</b><span>{{ detail.end_at }}</span></p>
                 <p><b>Tester: &nbsp;</b><span>{{ detail.tester }}</span></p>
               </div>
-              <table class="table" id="aw" data-toggle="table">
-                <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Fertility</th>
-                    <th>Kalium</th>
-                    <th>Nitrogen</th>
-                    <th>Phosphat</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="data-row" v-for="(item, index) in detail.results">
-                    <td>{{ index+1 }}</td>
-                    <td>{{ item.fertility }}</td>
-                    <td>{{ item.kalium }}</td>
-                    <td>{{ item.nitrogen }}</td>
-                    <td>{{ item.phosphat }}</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="responsive-table">
+                <table class="table" id="aw" data-toggle="table">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Fertility</th>
+                      <th>Kalium</th>
+                      <th>Nitrogen</th>
+                      <th>Phosphat</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="data-row" v-for="(item, index) in detail.results">
+                      <td>{{ index+1 }}</td>
+                      <td>{{ item.fertility }}</td>
+                      <td>{{ item.kalium }}</td>
+                      <td>{{ item.nitrogen }}</td>
+                      <td>{{ item.phosphat }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
