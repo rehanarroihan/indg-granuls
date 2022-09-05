@@ -1,0 +1,206 @@
+[
+  {
+    "kode": "11",
+    "prop": "ACEH",
+    "lat": 4.695135,
+    "lng": 96.7493993
+  },
+  {
+    "kode": "12",
+    "prop": "SUMATERA UTARA",
+    "lat": 2.1153547,
+    "lng": 99.5450974
+  },
+  {
+    "kode": "13",
+    "prop": "SUMATERA BARAT",
+    "lat": -0.7399397,
+    "lng": 100.8000051
+  },
+  {
+    "kode": "14",
+    "prop": "RIAU",
+    "lat": 0.2933469,
+    "lng": 101.7068294
+  },
+  {
+    "kode": "15",
+    "prop": "JAMBI",
+    "lat": -1.4851831,
+    "lng": 102.4380581
+  },
+  {
+    "kode": "16",
+    "prop": "SUMATERA SELATAN",
+    "lat": -3.3194374,
+    "lng": 103.914399
+  },
+  {
+    "kode": "17",
+    "prop": "BENGKULU",
+    "lat": -3.5778471,
+    "lng": 102.3463875
+  },
+  {
+    "kode": "18",
+    "prop": "LAMPUNG",
+    "lat": -4.5585849,
+    "lng": 105.4068079
+  },
+  {
+    "kode": "19",
+    "prop": "KEP. BANGKA BELITUNG",
+    "lat": -2.7410513,
+    "lng": 106.4405872
+  },
+  {
+    "kode": "21",
+    "prop": "KEPULAUAN RIAU",
+    "lat": 0.9171477,
+    "lng": 104.4495777
+  },
+  {
+    "kode": "31",
+    "prop": "DKI JAKARTA",
+    "lat": -6.211544,
+    "lng": 106.845172
+  },
+  {
+    "kode": "32",
+    "prop": "JAWA BARAT",
+    "lat": -7.090911,
+    "lng": 107.668887
+  },
+  {
+    "kode": "33",
+    "prop": "JAWA TENGAH",
+    "lat": -7.150975,
+    "lng": 110.1402594
+  },
+  {
+    "kode": "34",
+    "prop": "DI YOGYAKARTA",
+    "lat": -7.8753849,
+    "lng": 110.4262088
+  },
+  {
+    "kode": "35",
+    "prop": "JAWA TIMUR",
+    "lat": -7.5360639,
+    "lng": 112.2384017
+  },
+  {
+    "kode": "36",
+    "prop": "BANTEN",
+    "lat": -6.4058172,
+    "lng": 106.0640179
+  },
+  {
+    "kode": "51",
+    "prop": "BALI",
+    "lat": -8.4095178,
+    "lng": 115.188916
+  },
+  {
+    "kode": "52",
+    "prop": "NUSA TENGGARA BARAT",
+    "lat": -8.6529334,
+    "lng": 117.3616476
+  },
+  {
+    "kode": "53",
+    "prop": "NUSA TENGGARA TIMUR",
+    "lat": -8.6573819,
+    "lng": 121.0793705
+  },
+  {
+    "kode": "61",
+    "prop": "KALIMANTAN BARAT",
+    "lat": -0.2787808,
+    "lng": 111.4752851
+  },
+  {
+    "kode": "62",
+    "prop": "KALIMANTAN TENGAH",
+    "lat": -1.6814878,
+    "lng": 113.3823545
+  },
+  {
+    "kode": "63",
+    "prop": "KALIMANTAN SELATAN",
+    "lat": -3.0926415,
+    "lng": 115.2837585
+  },
+  {
+    "kode": "64",
+    "prop": "KALIMANTAN TIMUR",
+    "lat": 1.6406296,
+    "lng": 116.419389
+  },
+  {
+    "kode": "65",
+    "prop": "KALIMANTAN UTARA",
+    "lat": 3.0654,
+    "lng": 116.04913
+  },
+  {
+    "kode": "71",
+    "prop": "SULAWESI UTARA",
+    "lat": 0.6246932,
+    "lng": 123.9750018
+  },
+  {
+    "kode": "72",
+    "prop": "SULAWESI TENGAH",
+    "lat": -1.4300254,
+    "lng": 121.4456179
+  },
+  {
+    "kode": "73",
+    "prop": "SULAWESI SELATAN",
+    "lat": -3.6687994,
+    "lng": 119.9740534
+  },
+  {
+    "kode": "74",
+    "prop": "SULAWESI TENGGARA",
+    "lat": -4.14491,
+    "lng": 122.174605
+  },
+  {
+    "kode": "75",
+    "prop": "GORONTALO",
+    "lat": 0.6999372,
+    "lng": 122.4467238
+  },
+  {
+    "kode": "76",
+    "prop": "SULAWESI BARAT",
+    "lat": -2.8441371,
+    "lng": 119.2320784
+  },
+  {
+    "kode": "81",
+    "prop": "MALUKU",
+    "lat": -3.2384616,
+    "lng": 130.1452734
+  },
+  {
+    "kode": "82",
+    "prop": "MALUKU UTARA",
+    "lat": 1.5709993,
+    "lng": 127.8087693
+  },
+  {
+    "kode": "91",
+    "prop": "PAPUA",
+    "lat": -3.583735,
+    "lng": 138.152743
+  },
+  {
+    "kode": "92",
+    "prop": "PAPUA BARAT",
+    "lat": -1.33752,
+    "lng": 133.17601
+  }
+]
