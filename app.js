@@ -61,21 +61,27 @@ new Vue({
         await axios.get("dummy/districts.json").then(res => (this.districts = res.data))
         const dataList = await axios.get("https://granuls.rahardianwardana.my.id/api/listUjiCoba")
 
+        console.log(dataList.data.filter((item) => item.IdKab !== ""))
+
         const tempKab = {};
-        for (let { IdKab } of dataList.data) {
-          if (IdKab !== "") {
-            tempKab[IdKab] = {
+        for (let { IdKab, IdProp } of dataList.data) {
+          if (IdProp !== "") {
+            tempKab[IdProp] = {
               IdKab,
-                count: tempKab[IdKab] ? tempKab[IdKab].count + 1 : 1,
+              IdProp,
+              count: tempKab[IdProp] ? tempKab[IdProp].count + 1 : 1,
             };
           }
         }
-        let dataKabupatenProvinsi = Object.values(tempKab);
-        console.log("pengen", dataKabupatenProvinsi)
+        let dataKabupatenProvinsi = Object.values(tempKab)
+        
 
         // object plot dan label
         for (i = 0; i < dataKabupatenProvinsi.length; i++) {
             // Add the circle for this city to the map.
+            const getLat = 0.0
+            const getLng = 0.0
+            console.log(this.provinces.filter((item) => item.kode === dataKabupatenProvinsi[i].IdProp))
             const cityCircle = new google.maps.Circle({
               strokeColor: "blue",
               strokeOpacity: 0.8,
@@ -84,8 +90,8 @@ new Vue({
               fillOpacity: 0.35,
               map: this.map,
               center: new google.maps.LatLng(
-                  this.provinces[i].lat,
-                  this.provinces[i].lng
+                this.provinces.filter((item) => item.kode === dataKabupatenProvinsi[i].IdProp)[0].lat,
+                this.provinces.filter((item) => item.kode === dataKabupatenProvinsi[i].IdProp)[0].lng
               ),
               radius: Math.sqrt(dataKabupatenProvinsi[i].count) * 12000,
             });
@@ -94,8 +100,8 @@ new Vue({
 
             const labelMarker = new google.maps.Marker({
               position: new google.maps.LatLng(
-                this.provinces[i].lat,
-                this.provinces[i].lng
+                this.provinces.filter((item) => item.kode === dataKabupatenProvinsi[i].IdProp)[0].lat,
+                this.provinces.filter((item) => item.kode === dataKabupatenProvinsi[i].IdProp)[0].lng
               ),
               icon: svgCircle,
               map: this.map,
