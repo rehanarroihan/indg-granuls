@@ -65,7 +65,7 @@ new Vue({
 
         const tempKab = {};
         for (let { IdKab, IdProp } of dataList.data) {
-          if (IdProp !== "") {
+          if (IdProp !== "" && IdProp !== null) {
             tempKab[IdProp] = {
               IdKab,
               IdProp,
