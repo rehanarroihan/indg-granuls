@@ -59,15 +59,19 @@ new Vue({
         // mutate data kabupaten & provinsi
         await axios.get("dummy/provinces.json").then(res => (this.provinces = res.data))
         await axios.get("dummy/districts.json").then(res => (this.districts = res.data))
+        const dataList = await axios.get("https://granuls.rahardianwardana.my.id/api/listUjiCoba")
 
         const tempKab = {};
-        for (let { prop } of this.districts) {
-          tempKab[prop] = {
-              prop,
-              count: tempKab[prop] ? tempKab[prop].count + 1 : 1,
-          };
+        for (let { IdKab } of dataList.data) {
+          if (IdKab !== "") {
+            tempKab[IdKab] = {
+              IdKab,
+                count: tempKab[IdKab] ? tempKab[IdKab].count + 1 : 1,
+            };
+          }
         }
         let dataKabupatenProvinsi = Object.values(tempKab);
+        console.log("pengen", dataKabupatenProvinsi)
 
         // object plot dan label
         for (i = 0; i < dataKabupatenProvinsi.length; i++) {
@@ -105,10 +109,6 @@ new Vue({
             labelMarker.prov = dataKabupatenProvinsi[i].namaProvinsi
             this.plots.label.push(labelMarker)
         }
-        console.log(this.plots)
-        // for (const i in this.plots) {
-        //   this.plots[i].setMap(this.map)
-        // }
     },
 
     getList() {
